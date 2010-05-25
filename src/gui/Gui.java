@@ -19,13 +19,11 @@ import general.Board;
 import general.Game;
 import general.Move;
 import general.Piece;
-
 import java.awt.*;
 import java.awt.event.*;
+import java.net.URL;
 import java.util.*;
 import javax.swing.*;
-
-
 import player.Player;
 import player.PlayerAI;
 import player.PlayerHuman;
@@ -58,6 +56,8 @@ public class Gui extends JPanel implements Runnable, MouseListener  {
 	private static boolean humanVsHumanMode;
 	private static boolean humanVsAiMode;
 	private static boolean aiVsAiMode;
+	private String graphicsPath="./graphics/";
+	private String jarGraphicsPath="/graphics/";
 	//gui variables
 	private JFrame f;
 	private JMenuBar menuBar;
@@ -417,28 +417,83 @@ public class Gui extends JPanel implements Runnable, MouseListener  {
     	ArrayList<Piece> pieces = board.getPieces();
     	Toolkit toolkit = getToolkit();
     	Image img = null;
+    	URL imgURL = null;
     	//draw all pieces
     	for (Piece p : pieces) {
     		if (p.getColor()==0) { //white piece
     			//get image
     			switch(p.getType()) {
     			case 1:
-    				img = toolkit.getImage("./graphics/wk.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"wk.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"wk.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 2:
-    				img = toolkit.getImage("./graphics/wq.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"wq.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"wq.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 3:
-    				img = toolkit.getImage("./graphics/wr.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"wr.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"wr.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 4:
-    				img = toolkit.getImage("./graphics/wn.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"wn.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"wn.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 5:
-    				img = toolkit.getImage("./graphics/wb.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"wb.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"wb.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 6:
-    				img = toolkit.getImage("./graphics/wp.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"wp.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"wp.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			default:
     				break;
@@ -447,22 +502,76 @@ public class Gui extends JPanel implements Runnable, MouseListener  {
     			//get image
     			switch(p.getType()) {
     			case 1:
-    				img = toolkit.getImage("./graphics/bk.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"bk.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"bk.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 2:
-    				img = toolkit.getImage("./graphics/bq.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"bq.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"bq.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 3:
-    				img = toolkit.getImage("./graphics/br.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"br.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"br.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 4:
-    				img = toolkit.getImage("./graphics/bn.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"bn.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"bn.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 5:
-    				img = toolkit.getImage("./graphics/bb.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"bb.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"bb.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			case 6:
-    				img = toolkit.getImage("./graphics/bp.gif");
+    				try {
+        				imgURL = this.getClass().getResource(jarGraphicsPath+"bp.gif");
+        				img = toolkit.getImage(imgURL);
+					} catch (Exception e) {
+						try {
+							img = toolkit.getImage(graphicsPath+"bp.gif");
+						} catch (Exception e2) {
+							System.out.println("img not found");
+						}
+					}
     				break;
     			default:
     				break;
