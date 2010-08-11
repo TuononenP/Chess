@@ -1,6 +1,7 @@
 Author: Petri Tuononen
 Date: 24/05/2010
 University of Portsmouth, UK
+License: GPLv3
 
 An ancient game of chess implemented using Java computer language. The earlier version was text based, but this newer
 version incorporates graphics using Java's AWT library. It has three game modes to choose from: Human VS Human,
